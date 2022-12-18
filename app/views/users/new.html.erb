@@ -1,5 +1,23 @@
 <h1>New User</h1>
 
+<%= form_with model: @user do |form| %>
+  <%= form.label :username, "Your user name here" %>
+  <%= form.text_field :username, value: "anonymous_user" %>
+  <br><br>
+
+  <%= form.label :email%>
+  <%= form.text_field :email, placeholder: "example@example.com" %>
+  <br><br>
+
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+  <br><br>
+
+  <%= form.submit "Create User" %>
+<% end %>
+
+
+<!-- 
 <%= form_tag('/users') do %>
 
   <%= label_tag 'username' %>
@@ -17,7 +35,7 @@
   <%= submit_tag "Save User" %>
 
 <% end %>
-
+-->
 
 <!-- 
 <form action="/users" method="post" accept-charset="UTF-8">
